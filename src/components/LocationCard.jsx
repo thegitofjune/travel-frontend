@@ -11,7 +11,7 @@ const LocationCard = (props) => {
         <div className="card-body">
           <h5 className="card-title">Location</h5>
           <p className="card-text">{props.location.name}.</p>
-          <Link to={`/location-details/${props.location.locationId}`} >More about {props.location.name}</Link>
+          <Link to={`/location-details/${props.location.locationId}`} >More about this location</Link>
         </div>
       </div>
     </div>
