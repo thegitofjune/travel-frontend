@@ -8,7 +8,7 @@ const LandingPage = () => {
 
     return (
         <div className="manImage mainMargin">
-            <img src={worldMap} alt="Travels" height="400" className="imageBorder" />
+            <img src={worldMap} alt="Travels" height="400" className="imageBorder fade-in-image" />
         </div>
     )
 }
