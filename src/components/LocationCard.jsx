@@ -11,9 +11,7 @@ const LocationCard = (props) => {
         <div className="card-body">
           <h5 className="card-title">Location</h5>
           <p className="card-text">{props.location.name}.</p>
-          <h6 className="card-title">thoughts on {props.location.name}:</h6>
-          <p className="card-text">{props.location.reviews.reviewBody}</p>
-          <Link to="/location/{locationId}" className="card-link">More about this location</Link>
+          <Link to={`/location-details/${props.location.locationId}`} >More about {props.location.name}</Link>
         </div>
       </div>
     </div>
