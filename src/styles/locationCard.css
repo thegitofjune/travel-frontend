@@ -1,0 +1,26 @@
+.cardWitdh {
+    width: 18rem;
+}
+
+.cardsInRow {
+    display: inline-block;
+  }
+
+  .roundCorners {
+    border-radius: 25px;
+    background-color: #EEECFB;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .cardShadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #d9b3ff;
+}
+
+  .spaces {
+      margin-right: 10px;
+      margin-bottom: 20px;
+  }

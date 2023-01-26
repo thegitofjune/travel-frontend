@@ -1,0 +1,9 @@
+.mainMargin {
+    margin: auto;
+    width: 580;
+    padding: 20px;
+}
+
+.imageBorder {
+    border-radius: 50%;
+}
