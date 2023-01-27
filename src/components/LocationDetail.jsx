@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 
 const LocationDetail = () => {
@@ -9,11 +9,7 @@ const LocationDetail = () => {
     const locationApi = `http://localhost:8088/api/v1/locations/`
     const [locationDetails, setLocationDetails] = useState([])
     const [location, setLocation] = useState({})
-
-    useEffect(() => {
-        loadLocationDetails()
-        loadLocation()
-    }, []);
+    
 
     const loadLocationDetails = () => {
         axios.get(locationDetailApi).then
@@ -23,11 +19,18 @@ const LocationDetail = () => {
             });
     }
 
+    
     const loadLocation = () => {
         axios.get(locationApi).then((response) => {
             setLocation(response.data);
         });
     }
+
+    useEffect(() => {
+        loadLocationDetails()
+        loadLocation()
+        
+    }, []);
 
 
     return (
@@ -35,9 +38,13 @@ const LocationDetail = () => {
             <h3>Location details for  {locationDetails.name}</h3>
 
             <p>{locationDetails.name}</p>
-            <p>{locationDetails.locationId}</p>
-            <p>{locationDetails.attractions.name}</p>
 
+            <h3>Travel review for  {locationDetails.name}</h3>
+
+            <p>{locationDetails.review}</p>
+
+
+         
 
         </div>
     )
