@@ -20,7 +20,7 @@ const Location = () => {
 
     return(
         <div>
-            <Link to="/add-academy">Add new trip location</Link>
+            <hr/>
             <div className="accordion" id="accordionExample">
                 {locations.map(
                     location => <LocationCard key={location.locationId} location={location}/>

@@ -8,6 +8,7 @@ import Navbar from './components/NavBar'
 import LandingPage from './components/LandingPage'
 import Footer from './components/Footer'
 import LocationDetail from './components/LocationDetail'
+import AddLocation from './components/AddLocation'
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/locations" element={<Location />}></Route>
         <Route path="/location-details/:locationId/" element={<LocationDetail />}></Route>
+        <Route path="/add-location/" element={<AddLocation />}></Route>
+
       </Routes>
       <Footer />
     </div>
