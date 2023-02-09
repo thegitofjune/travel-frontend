@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 const LocationDetail = () => {
 
@@ -47,19 +48,16 @@ const LocationDetail = () => {
 
     return (
         <div>
-            <h3>Location details for  {locationDetails.name}</h3>
-
-            <p>{locationDetails.name}</p>
-
-            <h3>Travel review for  {locationDetails.name}</h3>
-
+            <hr/>
+            <h3>Destination:  {locationDetails.name}</h3>
+            <Link to="add-attraction">Add a new attraction for {locationDetails.name}</Link>
+            <hr/>
             <p>{locationDetails.review}</p>
 
-
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
-                        <th scope="col">Attraction name</th>
+                        <th scope="col">Attractions in {locationDetails.name}</th>
                         <th scope="col">Review</th>
                     </tr>
                 </thead>

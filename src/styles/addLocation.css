@@ -1,0 +1,11 @@
+.button-padding {
+    margin : 5px 10px 10px 5px;
+}
+
+.error {
+    color: red;
+}
+
+form {
+    display: inline-block;
+}

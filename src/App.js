@@ -9,6 +9,7 @@ import LandingPage from './components/LandingPage'
 import Footer from './components/Footer'
 import LocationDetail from './components/LocationDetail'
 import AddLocation from './components/AddLocation'
+
 function App() {
   return (
     <div className="App">
