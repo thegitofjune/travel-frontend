@@ -1,7 +1,6 @@
-import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 const LocationDetail = () => {
 
@@ -9,6 +8,7 @@ const LocationDetail = () => {
     const locationDetailApi = `http://localhost:8088/api/v1/locations/` + params.locationId
     const locationApi = `http://localhost:8088/api/v1/locations/`
     const attractionAPI = `http://localhost:8088/api/v1/attractions/` + params.locationId
+    const locationId = params.locationId
 
     const [locationDetails, setLocationDetails] = useState([])
     const [attractions, setAttractions] = useState([])
@@ -50,8 +50,7 @@ const LocationDetail = () => {
         <div>
             <hr/>
             <h3>Destination:  {locationDetails.name}</h3>
-            <Link to="add-attraction">Add a new attraction for {locationDetails.name}</Link>
-            <hr/>
+            <Link to={`/add-attraction/${locationId}`}>add an attaction</Link>            <hr/>
             <p>{locationDetails.review}</p>
 
             <table className="table">

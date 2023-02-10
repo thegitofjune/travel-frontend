@@ -9,6 +9,7 @@ import LandingPage from './components/LandingPage'
 import Footer from './components/Footer'
 import LocationDetail from './components/LocationDetail'
 import AddLocation from './components/AddLocation'
+import AddAttraction from './components/AddAttraction'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/locations" element={<Location />}></Route>
         <Route path="/location-details/:locationId/" element={<LocationDetail />}></Route>
         <Route path="/add-location/" element={<AddLocation />}></Route>
+        <Route path="/add-attraction/:locationId" element={<AddAttraction />}></Route>
 
       </Routes>
       <Footer />
