@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import {Link, useParams} from 'react-router-dom'
 
@@ -6,13 +6,11 @@ const LocationDetail = () => {
 
     const params = useParams()
     const locationDetailApi = `http://localhost:8088/api/v1/locations/` + params.locationId
-    const locationApi = `http://localhost:8088/api/v1/locations/`
     const attractionAPI = `http://localhost:8088/api/v1/attractions/` + params.locationId
     const locationId = params.locationId
 
     const [locationDetails, setLocationDetails] = useState([])
     const [attractions, setAttractions] = useState([])
-    const [location, setLocation] = useState({})
 
 
     const loadLocationDetails = () => {
@@ -25,11 +23,7 @@ const LocationDetail = () => {
     }
 
 
-    const loadLocation = () => {
-        axios.get(locationApi).then((response) => {
-            setLocation(response.data);
-        });
-    }
+  
 
     const loatAttractions = () => {
         axios.get(attractionAPI).then((response) => {
@@ -41,8 +35,8 @@ const LocationDetail = () => {
 
     useEffect(() => {
         loadLocationDetails()
-        loadLocation()
         loatAttractions()
+          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 

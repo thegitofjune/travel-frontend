@@ -7,7 +7,6 @@ const AddLocation = () => {
 
     const navigate = useNavigate()
     const locationApi = `http://localhost:8088/api/v1/locations/addLocation`
-    const [location, setLocation] = useState([])
     const [name, setName] = useState('')
     const [review, setReview] = useState('')
 

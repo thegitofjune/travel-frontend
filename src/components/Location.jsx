@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import LocationCard from './LocationCard'
-import {Link} from 'react-router-dom'
+
 
 const Location = () => {
 
