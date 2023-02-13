@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import LocationDetail from './components/LocationDetail'
 import AddLocation from './components/AddLocation'
 import AddAttraction from './components/AddAttraction'
+import EditLocation from './components/EditLocation'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/location-details/:locationId/" element={<LocationDetail />}></Route>
         <Route path="/add-location/" element={<AddLocation />}></Route>
         <Route path="/add-attraction/:locationId" element={<AddAttraction />}></Route>
+        <Route path="/edit-Location/:locationId" element={<EditLocation />}></Route>
 
       </Routes>
       <Footer />

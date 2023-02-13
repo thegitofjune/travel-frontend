@@ -45,6 +45,7 @@ const LocationDetail = () => {
             <hr/>
             <h3>Destination:  {locationDetails.name}</h3>
             <Link to={`/add-attraction/${locationId}`}>add an attaction</Link>            <hr/>
+            <Link to={`/edit-location/${locationId}`}>Edit this location</Link>  
             <p>{locationDetails.review}</p>
 
             <table className="table">
