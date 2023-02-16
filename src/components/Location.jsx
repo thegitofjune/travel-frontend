@@ -21,7 +21,7 @@ const Location = () => {
     return(
         <div>
             <hr/>
-            <div className="accordion" id="accordionExample">
+            <div>
                 {locations.map(
                     location => <LocationCard key={location.locationId} location={location}/>
                 )}
