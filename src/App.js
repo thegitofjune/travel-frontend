@@ -12,6 +12,7 @@ import AddLocation from './components/AddLocation'
 import AddAttraction from './components/AddAttraction'
 import EditLocation from './components/EditLocation'
 import NotFoundPage from './components/NoutFoundPage'
+import EditAttraction from './components/EditAttraction'
 import { Modal } from 'bootstrap'
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         <Route path="/add-attraction/:locationId" element={<AddAttraction />}></Route>
         <Route path="/edit-Location/:locationId" element={<EditLocation />}></Route>
         <Route path="/modal/:locationId" element={<Modal />}></Route>
+        <Route path="/edit-attraction/:locationId/:attractionId" element={<EditAttraction />}></Route>
+        
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

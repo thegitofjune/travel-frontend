@@ -40,8 +40,8 @@ const LocationDetail = (props) => {
         <div>
             <hr />
             <h3>Destination:  {locationDetails.name}</h3>
-            <Link to={`/add-attraction/${locationId}`} className="linkGap">add an attaction</Link>
-            <Link to={`/edit-location/${locationId}`} className="linkGap">Edit this location</Link>
+            <Link to={`/add-attraction/${locationId}`} className="linkGap text-dark">add an attaction</Link>
+            <Link to={`/edit-location/${locationId}`} className="linkGap text-dark">Edit this location</Link>
             <p>{locationDetails.review}</p>
 
             <div className="accordion purple-background  width90 corners5" id="accordionExample">
