@@ -33,7 +33,6 @@ const EditLocation = () => {
 
                 setName(response.data.name)
                 setReview(response.data.review)
-                console.log(response.data)
             });
     }
 
@@ -43,9 +42,7 @@ const EditLocation = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const loadLocation = (event) => {
-
-    }
+ 
     return (
         <div className="center">
             <hr />

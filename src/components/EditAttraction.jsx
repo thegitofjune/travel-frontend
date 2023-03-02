@@ -20,10 +20,6 @@ const EditAttraction = (props) => {
         axios.get(locationApi).then
             ((response) => {
                 setLocation(response.data)
-                console.log("loading location " + location)
-                console.log(locationApi)
-                console.log("response " +response.data)
-                console.log(response)
             });
     }
 

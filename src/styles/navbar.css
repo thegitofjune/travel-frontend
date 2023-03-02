@@ -1,4 +1,13 @@
 .purple-background {
     background-color: #a64dff;
     color: white;
+    font-size: 1.5em;
+}
+
+
+
+ul
+{
+  display:flex;  
+  list-style:none;
 }

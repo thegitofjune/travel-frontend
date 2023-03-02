@@ -18,15 +18,12 @@ const LocationDetail = (props) => {
         axios.get(locationDetailApi).then
             ((response) => {
                 setLocationDetails(response.data);
-                console.log(response.data)
-                console.log(attractionAPI)
             });
     }
 
     const loatAttractions = () => {
         axios.get(attractionAPI).then((response) => {
             setAttractions(response.data);
-            console.log("in this method")
         });
     }
 
