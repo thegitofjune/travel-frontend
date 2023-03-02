@@ -56,7 +56,6 @@ const EditAttraction = (props) => {
 
     useEffect(() => {
       loadAttraction()
-      loadLocation()
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
