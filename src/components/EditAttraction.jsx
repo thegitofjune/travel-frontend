@@ -77,9 +77,6 @@ const EditAttraction = (props) => {
                     <label htmlFor="exampleInputReview">Review:</label>
                     <input type="number"  className="form-control" id="rating"  placeholder="Enter attraction rating" value={rating} onChange={event => setRating(event.target.value)}></input>
                 </div>
-                <div>
-                <input type="hidden" name="location" value={location} ></input>
-                </div>
                 <button type="submit" className="btn btn btn-success  button-padding">Submit</button>
                 <button type="button" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</button>
             </form>
