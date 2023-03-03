@@ -38,12 +38,13 @@ const AttractionCard = (props) => {
               </Modal.Header>
               <Modal.Body>{props.attraction.review}</Modal.Body>
               <Modal.Footer>
-                <Button className="purple" variant="secondary" onClick={handleClose}>
+                <Button  variant="secondary" onClick={handleClose}>
                   Close
           </Button>
               </Modal.Footer>
             </Modal>
           </div>
+          <hr/>
           <Link to={`/edit-attraction/${locationId}/${attractionId}`}  >Edit this attraction</Link>
         </div>
       </div>

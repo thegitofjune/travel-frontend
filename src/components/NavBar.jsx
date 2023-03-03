@@ -6,21 +6,16 @@ const NavBar = () => {
 
     return (
         <div>
-            <nav className="navbar  navbar-light  greyBackground " >
-                <ul id="menu">
-                    <li>
-                        <Link className="navbar-brand" to="/"></Link> 
-                    </li>&nbsp;|&nbsp;
-                    <li>
-                        <Link className="nav-item nav-link active" to="/">Travel Map</Link>
-                    </li>&nbsp;|&nbsp;
-                    <li>
-                        <Link className="nav-item nav-link active" to="/locations">Destinations</Link>
-                    </li>&nbsp;|&nbsp;
-                    <li>
-                        <Link className="nav-item nav-link active" to="/add-location">Add a Destination</Link>
-                    </li>&nbsp;|&nbsp;
-                </ul>
+            <nav className="navbar  navbar-light  greyBackground navbar-fixed-top" >
+                
+                        <Link className="navbar-brand" to="/"></Link> |
+                   
+                        <Link className="nav-item nav-link active" to="/">Travel Map</Link>|
+                   
+                        <Link className="nav-item nav-link active" to="/locations">Destinations</Link>|
+                   
+                        <Link className="nav-item nav-link active" to="/add-location">Add a Destination</Link>|
+              
             </nav>
         </div>
     )

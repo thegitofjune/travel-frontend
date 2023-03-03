@@ -17,7 +17,7 @@
   .cardShadow {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px #C0C0C0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
   .spaces {
@@ -32,6 +32,6 @@
   .reviewButton {
     background-color: purple;
     color: black;
-    border: 2px solid #4CAF50; /* Green */
+    border: 2px solid black; /* Green */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
