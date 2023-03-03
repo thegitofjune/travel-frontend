@@ -12,13 +12,13 @@ const NavBar = () => {
                         <Link className="navbar-brand" to="/"></Link> 
                     </li>&nbsp;|&nbsp;
                     <li>
-                        <Link className="nav-item nav-link active" to="/">Home</Link>
+                        <Link className="nav-item nav-link active" to="/">Travel Map</Link>
                     </li>&nbsp;|&nbsp;
                     <li>
-                        <Link className="nav-item nav-link active" to="/locations">Locations</Link>
+                        <Link className="nav-item nav-link active" to="/locations">Destinations</Link>
                     </li>&nbsp;|&nbsp;
                     <li>
-                        <Link className="nav-item nav-link active" to="/add-location">Add a Location</Link>
+                        <Link className="nav-item nav-link active" to="/add-location">Add a Destination</Link>
                     </li>&nbsp;|&nbsp;
                 </ul>
             </nav>

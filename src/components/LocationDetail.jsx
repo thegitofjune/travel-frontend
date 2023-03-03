@@ -38,10 +38,10 @@ const LocationDetail = (props) => {
             <hr />
             <h3>Destination:  {locationDetails.name}</h3>
             <Link to={`/add-attraction/${locationId}`} className="linkGap text-dark">add an attaction</Link>
-            <Link to={`/edit-location/${locationId}`} className="linkGap text-dark">Edit this location</Link>
+            <Link to={`/edit-location/${locationId}`} className="linkGap text-dark">Edit this destination</Link>
             <p>{locationDetails.review}</p>
 
-            <div className="accordion purple-background  width90 corners5" id="accordionExample">
+            <div>
                 {attractions.map(
                     attraction => <AttractionCard key={attraction.attractionId} attraction={attraction} />
                 )}

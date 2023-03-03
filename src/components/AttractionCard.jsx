@@ -1,4 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
+import '../styles/locationCard.css'
+
 
 const AttractionCard = (props) => {
 
@@ -10,21 +12,17 @@ const AttractionCard = (props) => {
 
 
   return (
-    <div className="accordion-item corners5">
-      <Link to={`/edit-attraction/${locationId}/${attractionId}`} className="float-end text-light ">edit this attraction</Link>
-      <h2 className="accordion-header accordianTitle purple-background" id={id1}>
-      
-     
-        <button className="accordion-button accordianTitle " type="button" data-bs-toggle="collapse" data-bs-target={"#" + id2} aria-expanded="false" aria-controls={id2}>      
-         <h5 className="card-text text-white">{props.attraction.name}</h5>
-        </button>
-      </h2>
-      <div id={id2} className="accordion-collapse collapse opacity90" aria-labelledby={id1} data-bs-parent="#accordionExample">
-        <div className=" container">
-            <span>{props.attraction.review}</span>
-        </div>
+    <div className="cardsInRow">
+    <div className="card cardWitdh roundCorners cardShadow spaces">
+      <div className="card-body">
+        <h6 className="card-title">Attraction:</h6>
+        <h5 className="card-text">{props.attraction.name}</h5>
+        <h5 className="card-text">{props.attraction.review}</h5>
+        <h6 className="card-text">June's travel rating: {props.attraction.rating}</h6>
+        <Link to={`/edit-attraction/${locationId}/${attractionId}`}  >Edit this attraction</Link>
       </div>
     </div>
+  </div>
   )
 }
 
