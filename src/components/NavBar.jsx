@@ -6,7 +6,7 @@ const NavBar = () => {
 
     return (
         <div>
-            <nav className="navbar  navbar-light  purple-background " >
+            <nav className="navbar  navbar-light  greyBackground " >
                 <ul id="menu">
                     <li>
                         <Link className="navbar-brand" to="/"></Link> 

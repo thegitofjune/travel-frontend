@@ -29,10 +29,10 @@ const AttractionCard = (props) => {
             className="modal show"
             style={{ display: 'block', position: 'initial' }}
           >
-            <Button className="reviewButton"  variant="secondary" onClick={handleShow}>
+            <Button className="reviewButton" variant="custom" onClick={handleShow}>
               read review      </Button>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal centered show={show} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>June's review of {props.attraction.name}</Modal.Title>
               </Modal.Header>
