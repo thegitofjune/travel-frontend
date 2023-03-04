@@ -6,7 +6,7 @@ const LocationCard = (props) => {
 
 
   return (
-    <div className="cardsInRow">
+    <div className="cardsInRow ">
       <div className="card cardWitdh roundCorners cardShadow spaces">
         <div className="card-body">
           <h6 className="card-title">Destination:</h6>

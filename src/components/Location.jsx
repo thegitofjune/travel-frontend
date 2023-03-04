@@ -19,7 +19,7 @@ const Location = () => {
     }
 
     return(
-        <div>
+        <div className="container">
             <hr/>
             <div>
                 {locations.map(

@@ -24,7 +24,7 @@ const AttractionCard = (props) => {
           <h6 className="card-title">Attraction:</h6>
           <h5 className="card-text">{props.attraction.name}</h5>
           <h6 className="card-text">June's travel rating: {props.attraction.rating}</h6>
-
+          <hr />
           <div
             className="modal show"
             style={{ display: 'block', position: 'initial' }}
@@ -38,13 +38,13 @@ const AttractionCard = (props) => {
               </Modal.Header>
               <Modal.Body>{props.attraction.review}</Modal.Body>
               <Modal.Footer>
-                <Button  variant="secondary" onClick={handleClose}>
+                <Button variant="secondary" onClick={handleClose}>
                   Close
           </Button>
               </Modal.Footer>
             </Modal>
           </div>
-          <hr/>
+          <hr />
           <Link to={`/edit-attraction/${locationId}/${attractionId}`}  >Edit this attraction</Link>
         </div>
       </div>

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import '../styles/addLocation.css'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const EditLocation = () => {
 
@@ -9,7 +11,7 @@ const EditLocation = () => {
     const navigate = useNavigate()
     const updateLocationApi = `http://localhost:8088/api/v1/locations/` + params.locationId
     const locationDetailApi = `http://localhost:8088/api/v1/locations/` + params.locationId
-    const [locationId, setLocationId] = useState('')
+    const [rating, setRating] = useState('')
     const [name, setName] = useState('')
     const [review, setReview] = useState('')
 
@@ -21,7 +23,8 @@ const EditLocation = () => {
         axios.put(updateLocationApi, {
             locationId: params.locationId,
             name: name,
-            review: review
+            review: review,
+            rating: rating
         }).then(
             navigate('/locations')
         )
@@ -33,6 +36,7 @@ const EditLocation = () => {
 
                 setName(response.data.name)
                 setReview(response.data.review)
+                setRating(response.data.rating)
             });
     }
 
@@ -46,18 +50,22 @@ const EditLocation = () => {
     return (
         <div className="center">
             <hr />
-            <form className="col-10" onSubmit={updateLocation}>
-                <div className="form-group">
-                    <label htmlFor="exampleInputName">Location Name:</label>
-                    <input type="text" className="form-control" id="name" placeholder="Enter location name" value={name} onChange={event => setName(event.target.value)} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputReview">Review:</label>
-                    <textarea className="form-control" id="review" rows="5" placeholder="Enter location review" value={review} onChange={event => setReview(event.target.value)}></textarea>
-                </div>
-                <button type="submit" className="btn btn btn-success  button-padding">Submit</button>
-                <button type="button" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</button>
-            </form>
+            <Form className="col-10" onSubmit={updateLocation}>
+                <Form.Group className="mb-3">
+                <Form.Label>Location Name:</Form.Label>
+                    <Form.Control type="text" className="form-control" id="name" placeholder="Enter location name" value={name} onChange={event => setName(event.target.value)} />
+                    </Form.Group>
+                <Form.Group className="mb-3">
+                <Form.Label>Review:</Form.Label>
+                    <Form.Control as="textarea"  className="form-control" id="review" rows="5" placeholder="Enter location review" value={review} onChange={event => setReview(event.target.value)} />
+                    </Form.Group>
+                <Form.Group className="mb-3">
+                <Form.Label> Rating:</Form.Label>
+                <Form.Control type="number" className="form-control" id="review"  placeholder="Add a rating from 1 to 5" value={rating} onChange={event => setRating(event.target.value)}/>
+                    </Form.Group>
+                <Button variant="primary" type="submit" className="button-padding">Submit </Button>
+                <Button variant="primary" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</Button>
+            </Form>
         </div>
     )
 }
