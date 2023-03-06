@@ -11,11 +11,18 @@ const EditLocation = () => {
     const navigate = useNavigate()
     const updateLocationApi = `http://localhost:8088/api/v1/locations/` + params.locationId
     const locationDetailApi = `http://localhost:8088/api/v1/locations/` + params.locationId
+    const regionApi = `http://localhost:8088/api/v1/locations/regions`
     const [rating, setRating] = useState('')
     const [name, setName] = useState('')
     const [review, setReview] = useState('')
+    const [region, setRegion] = useState("")
+    const [regions, setRegions] = useState([])
 
-
+    const loadRegions = () => {
+        axios.get(regionApi).then((response) => {
+            setRegions(response.data);
+          });
+    }
 
     const updateLocation = (event) => { 
         event.preventDefault()
@@ -24,7 +31,8 @@ const EditLocation = () => {
             locationId: params.locationId,
             name: name,
             review: review,
-            rating: rating
+            rating: rating,
+            region: region
         }).then(
             navigate('/locations')
         )
@@ -33,15 +41,16 @@ const EditLocation = () => {
     const loadLocationDetails = () => {
         axios.get(locationDetailApi).then
             ((response) => {
-
                 setName(response.data.name)
                 setReview(response.data.review)
                 setRating(response.data.rating)
+                setRegion(response.data.region)
             });
     }
 
     useEffect(() => {
         loadLocationDetails()
+        loadRegions()
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -63,6 +72,15 @@ const EditLocation = () => {
                 <Form.Label> Rating:</Form.Label>
                 <Form.Control type="number" className="form-control" id="review"  placeholder="Add a rating from 1 to 5" value={rating} onChange={event => setRating(event.target.value)}/>
                     </Form.Group>
+                    <Form.Group className="mb-3">
+                    <Form.Select  name="region" value={region} onChange={event => setRegion(event.target.value)}>
+                                    {regions.map((region, id) => (
+										<option key={region.id} name="region">
+											{region}  
+										</option>
+									))}
+                                   </Form.Select >
+                </Form.Group>
                 <Button variant="success" type="submit" className="button-padding">Submit </Button>
                 <Button variant="primary" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</Button>
             </Form>
