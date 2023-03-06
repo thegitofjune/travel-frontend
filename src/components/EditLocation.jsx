@@ -17,7 +17,7 @@ const EditLocation = () => {
 
 
 
-    const updateLocation = (event) => {
+    const updateLocation = (event) => { 
         event.preventDefault()
 
         axios.put(updateLocationApi, {
@@ -63,7 +63,7 @@ const EditLocation = () => {
                 <Form.Label> Rating:</Form.Label>
                 <Form.Control type="number" className="form-control" id="review"  placeholder="Add a rating from 1 to 5" value={rating} onChange={event => setRating(event.target.value)}/>
                     </Form.Group>
-                <Button variant="primary" type="submit" className="button-padding">Submit </Button>
+                <Button variant="success" type="submit" className="button-padding">Submit </Button>
                 <Button variant="primary" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</Button>
             </Form>
         </div>

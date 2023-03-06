@@ -8,8 +8,6 @@ import { useState } from 'react';
 const AttractionCard = (props) => {
 
   const params = useParams()
-  const id1 = "headingOne" + props.attraction.attractionId
-  const id2 = "collapseOne" + props.attraction.attractionId
   const attractionId = props.attraction.attractionId
   const locationId = params.locationId
   const [show, setShow] = useState(false);

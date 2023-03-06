@@ -74,7 +74,7 @@ const EditAttraction = (props) => {
                     <Form.Label htmlFor="exampleInputRating">Rating:</Form.Label>
                     <Form.Control type="number" className="form-control" id="rating" placeholder="Add a rating from 1 to 5" value={rating} onChange={event => setRating(event.target.value)} />
                 </Form.Group>
-                <Button variant="primary" type="submit" className="button-padding">Submit </Button>
+                <Button variant="success" type="submit" className="button-padding">Submit </Button>
                 <Button variant="primary" className="btn btn-danger button-padding" onClick={() => navigate('/locations')}>Cancel</Button>
             </Form>
        
