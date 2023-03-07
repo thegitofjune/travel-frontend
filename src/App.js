@@ -15,6 +15,7 @@ import NotFoundPage from './components/NoutFoundPage'
 import EditAttraction from './components/EditAttraction'
 import { Modal } from 'bootstrap'
 import ChooseRegion from './components/ChooseRegion'
+import LocationsInRegion from './components/LocationsInregion'
 
 function App() {
 
@@ -32,6 +33,8 @@ function App() {
         <Route path="/modal/:locationId" element={<Modal />}></Route>
         <Route path="/edit-attraction/:locationId/:attractionId" element={<EditAttraction />}></Route>
         <Route path="/choose-region/" element={<ChooseRegion />}></Route>
+        <Route path="/locations-in-region/:region" element={<LocationsInRegion />}></Route>
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
